@@ -1,0 +1,15 @@
+python-dotenv~=1.0.1
+openai~=1.47.0
+ollama~=0.3.3
+pyttsx3~=2.97
+vosk~=0.3.44
+sounddevice~=0.5.0
+pyaudio
+asyncio~=3.4.3
+numpy~=2.1.1
+flask
+aiohttp
+requests
+flask_socketio
+flask_cors
+pygame

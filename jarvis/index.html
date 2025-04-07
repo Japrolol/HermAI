@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.A.R.V.I.S</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- QR Code library -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+</head>
+<body>
+    <canvas id="bg"></canvas>
+    <main>
+        <h1 class="hidden" id="jarvis">J.A.R.V.I.S</h1>
+
+        <section class="herma" id="herma-container">
+            <h1 class="industries">Herma Industries</h1>
+        </section>
+
+
+        <section class="text-space">
+            <div class="text-container" id="scrollable-container"></div>
+        </section>
+
+        <section class="side-border">
+            <div class="bottom-border"></div>
+            <div class="circle">
+                <div class="circle2">
+                    <p class="month" id="month"></p>
+                    <p class="big" id="day"></p>
+                    <div class="half-circle"></div>
+                </div>
+            </div>
+            <div class="circle-bottom">
+                <div class="circle2">
+                    <p class="month" id="current"></p>
+                    <p class="big" id="seconds"></p>
+                    <div class="half-circle"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="capacity">
+            <p class="capacity-text">Neural Capacity:</p>
+            <p class="capacity-percentage" id="percentage"></p>
+        </section>
+
+        <!-- GitHub QR Code -->
+        <div class="github-qr" id="qrcode"></div>
+    </main>
+
+    <script type="module" src="ui.js"></script>
+    <script type="module" src="main.js"></script>
+    <script>
+        // Generate QR code for github.com/japrolol
+        window.onload = function() {
+            const qr = qrcode(0, 'L');
+            qr.addData('https://github.com/japrolol');
+            qr.make();
+            document.getElementById('qrcode').innerHTML = qr.createImgTag(4);
+        };
+    </script>
+</body>
+</html>
